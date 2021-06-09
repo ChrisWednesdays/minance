@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Minance Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to Minance.</h1>
+
+    <form th:action="@{/minance/run}" class="form" method="get">
+        <button>Run</button>
+    </form>
+
+    <form th:action="@{/minance/stats}" class="form" method="get">
+        <button>Analyse Stats</button>
+    </form>
+</body>
+</html>

@@ -84,9 +84,6 @@ public class StatsService extends BaseService{
         double lastCoinPercent = 1.0;
         double priceChange = 0.0;
 
-        File file = new File("orderHistoryMaster.txt");
-        file.delete();
-
         List<TradeVariableModel> tradeVariableModelList = extractVariableList();
 
         for (TradeVariableModel tradeVariableModel : tradeVariableModelList) {
@@ -141,6 +138,7 @@ public class StatsService extends BaseService{
             pw.append("\n");
             pw.flush();
         }
+        pw.close();
     }
 
     @PostMapping("/orders")
